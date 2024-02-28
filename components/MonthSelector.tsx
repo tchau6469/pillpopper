@@ -84,14 +84,12 @@ export default function MonthSelector() {
 
   return (
     <div>
-      {/* <div
+      <div
         style={{
-          fontSize: "2.5rem",
+          textAlign: "center",
           paddingTop: "2rem",
-          marginBottom: "1rem",
-          paddingLeft: "20%"
         }}
-      > */}
+      >
         <input
           type="month"
           value={date}
@@ -99,20 +97,19 @@ export default function MonthSelector() {
             if (e.target.value !== "") setDate(e.target.value);
           }}
         />
-        
+
         <ArrowButton onClick={() => setDate(rewindMonth(date))}>
           {<TbArrowBadgeLeftFilled />}
         </ArrowButton>
         <ArrowButton onClick={() => setDate(advanceMonth(date))}>
           {<TbArrowBadgeRightFilled />}
         </ArrowButton>
-        
-      {/* </div> */}
+      </div>
       {/* <button onClick={()=>{localStorage.removeItem("calendarData")}}>clear localStorage</button> */}
 
       {list !== null ? (
         <div className="overflow-x-auto">
-          <table className="calendar table-lg" style={{margin: " auto"}}>
+          <table className="calendar table-lg" style={{ margin: " auto" }}>
             <thead style={{ border: "solid" }}>
               <tr>
                 <th>Su</th>
